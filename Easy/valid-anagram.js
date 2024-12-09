@@ -2,6 +2,6 @@
 
 // An anagram is a string that contains the exact same characters as another string, but the order of the characters can be different.
 
-isAnagram(s, t) {
+function isAnagram(s, t) {
     return s.split('').sort().join('') == t.split('').sort().join('')
 }
