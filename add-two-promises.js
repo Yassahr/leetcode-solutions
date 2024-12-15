@@ -6,3 +6,4 @@ var addTwoPromises = async function(promise1, promise2) {
     const prom2= await promise2
     return prom1 + prom2
 };
+//some alt solutions
