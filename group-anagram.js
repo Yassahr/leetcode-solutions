@@ -21,7 +21,7 @@ class Solution {
             :anagramCount[sorted]=[word];
             console.log(anagramCount)
          }
-        return Object.keys(anagramCount)
+        return Object.values(anagramCount)
     }
     //array of sub array(push)
 }
