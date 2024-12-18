@@ -16,3 +16,15 @@ topKFrequent(nums, k) {
     return Object.keys(frequency).filter(n=> frequency[n]>=k )
     //return filter
     }
+
+    //corrected solution(test cases accepted and submited)
+    topKFrequent(nums, k) {
+        //set up hash to count frequency
+        let frequency ={};
+        for(const num of nums){
+            frequency[num]=(frequency[num]||0) + 1;
+        }
+        console.log(frequency)
+        //filter values for those more than or equal to frequency
+        return Object.keys(frequency).sort((a,b)=>frequency[b]-frequency[a]).slice(0, k)
+        }
