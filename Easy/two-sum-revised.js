@@ -40,3 +40,31 @@ twoSum(arr, k){
     }
 
 }
+//secondary solution
+class Solution {
+    /**
+     * @param {number[]} nums
+     * @param {number} target
+     * @return {number[]}
+     */
+//array and single number
+//will the arr ever be empty, will any of the elements ever be empty or non numeric vals
+//will the target ever be 0 or a # less than zero?
+// will the values in the arr ever have negative. values
+//will target ever be empty
+//will their ever be duplicates, do duplicate indexes count toward correct answers
+ function twoSum(nums, target) {
+//hash map of values and their indexes
+    let indicies={};
+    for(let i=0; i<nums.length; i++){
+        indicies[nums[i]]= i;
+    }
+     console.log(indicies)
+
+    for(let i=0; i<nums.length-1;i++){
+        const diff = target-nums[i];
+        if(indicies[diff] && indicies[diff]!=i){
+            return [i,indicies[diff] ]
+        }
+    } 
+}
