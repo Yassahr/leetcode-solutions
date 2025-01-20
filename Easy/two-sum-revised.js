@@ -41,12 +41,7 @@ twoSum(arr, k){
 
 }
 //secondary solution
-class Solution {
-    /**
-     * @param {number[]} nums
-     * @param {number} target
-     * @return {number[]}
-     */
+
 //array and single number
 //will the arr ever be empty, will any of the elements ever be empty or non numeric vals
 //will the target ever be 0 or a # less than zero?
