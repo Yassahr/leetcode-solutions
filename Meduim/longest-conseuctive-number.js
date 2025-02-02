@@ -28,4 +28,30 @@ function longestConsecutive(nums) {
         }
     })
     return Math.max(...countArray)
+
+}
+class Solution {
+    /**
+     * @param {number[]} nums
+     * @return {number}
+     */
+    //array of number in number form
+    longestConsecutive(nums) {
+        //iterate through whole array
+        //check if n+1 or n-1 exists
+        //if it does add to count
+       
+        nums= new Set(nums)
+         if(nums.size===1){ 
+            return 1}
+         let count=0;
+
+        for(let number of nums){
+            if(nums.has(number+1)||nums.has(number-1)){
+                count++
+            }
+        }
+        return count
+     
+    }
 }
