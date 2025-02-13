@@ -31,3 +31,25 @@ class Solution {
 function hasDuplicates(nums){
 return new Set(nums).size<nums.length
 }
+//hashset solution
+class Solution {
+    /**
+     * @param {number[]} nums
+     * @return {boolean}
+     */
+    hasDuplicate(nums) {
+    //make a new hash set
+    //interiate through array and check if hashset has num
+    //if it has it return true
+    //add num
+    //if it does not have it return false after loop
+        const numsSet = new Set();
+        for(const num of nums){
+            if(numsSet.has(num)){
+                return true
+            }
+            numsSet.add(num)
+        }
+        return false
+    }
+}
