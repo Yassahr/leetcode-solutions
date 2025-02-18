@@ -29,3 +29,35 @@ class Solution {
     }
 }
 
+//partial solution
+class Solution {
+    
+  
+    /**
+     * @param {string} s
+     * @return {boolean}
+     */
+    //are special characters included
+   isAlphaNum(char){
+        return  ("a"<=char && char>="z")|| 0<=char && char>=9
+    }
+      
+   
+    isPalindrome(s) {
+    //change word to lower case
+    //filter out non alphanumeric charactors(helper function)
+    //for loop to reverse
+    //check for equality of both
+    let reversed ='';
+    let sPrime=""
+    s=s.toLowerCase();
+    for(let i=0;i<s.length;i++){
+     if(isAlphaNum(s[i])){
+        reversed += s[i]
+        sPrime = sPrime + s[i]
+     }
+     console.log(reversed)
+    }
+
+    }
+}
