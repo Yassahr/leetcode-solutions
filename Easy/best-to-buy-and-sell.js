@@ -56,3 +56,34 @@ class Solution {
         //return Math.max of that array 
     }
 }
+
+
+
+/Option 2
+        //conditional to check the length
+        if(prices.length===1){
+            return 0
+        }
+
+        //establish array to store values in
+        let diff =[]
+        //iteriate through array
+        for(let i=0; i<prices.length;i++){
+            let window= prices.slice(i);
+        //find the min and max of sliding window
+            let min = Math.min(...window)
+            let max = Math.max(...window)
+            console.log("window:", window,"min:", min, "max", max)
+          //conditional, if index of max < index of min
+          console.log(window.indexOf(min), window.indexOf(max))
+            if(window.indexOf(min)<window.indexOf(max)){
+                diff.push(max-min)
+            }
+            
+            //find the min and max of sliding window
+           //push the difference to an array 
+        }
+        console.log(diff)
+            return diff.length===0? 0: Math.max(...diff)
+        //return Math.max of that array 
+    }
